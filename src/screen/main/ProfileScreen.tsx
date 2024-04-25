@@ -1,16 +1,20 @@
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {image_back} from '../../../assets/image/images';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 
 const ProfileScreen = (propsx: any) => {
+  console.log(propsx,'messageProps')
   return (
-    <SafeAreaView style={{backgroundColor:'#FFF'}}>
-      <View >
-        <TouchableOpacity
-          style={{padding: 24}}>
-        </TouchableOpacity>
-      </View>
+    <SafeAreaView>
+      <TouchableOpacity
+        style={{padding: 24}}
+        onPress={() => {
+          propsx.onPressBackButton === undefined
+            ? propsx.navigation.goBack()
+            : propsx.onPressBackButton();
+        }}>
+        <Image source={image_back} style={styles.backIcon} />
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };

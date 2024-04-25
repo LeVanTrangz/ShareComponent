@@ -13,9 +13,10 @@ import {
   image_mail,
 } from '../../../assets/image/images';
 import {useState} from 'react';
-import ButtonComponent from '../../component/ButtonComponent';
 
 const ForgotScreen = (propsx: any) => {
+
+  console.log(propsx,'forgotProps')
   const [email, setEmail] = useState('');
 
   const {navigation} = propsx;

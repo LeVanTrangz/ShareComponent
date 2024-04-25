@@ -1,17 +1,17 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '../screen/auth/LoginScreen';
-import MainScreen from '../screen/main/MainScreen';
 import WelcomeScreen from '../screen/welcome/WelcomeScreen';
 import ForgotScreen from '../screen/auth/ForgotScreen';
 import VerifyScreen from '../screen/auth/VerifyScreen';
 import SignUp from '../screen/auth/SignupScreen';
+import DrawNavigator from './DrawNavigation';
 
 const Main = createNativeStackNavigator();
 
 function MainNavigator() {
   return (
     <Main.Navigator
-    initialRouteName='Main'
+    initialRouteName='HomeDraw'
       screenOptions={{
         headerShown: false,
       }}>
@@ -20,7 +20,7 @@ function MainNavigator() {
       <Main.Screen name="Signup" component={SignUp} />
       <Main.Screen name="Verify" component={VerifyScreen} />
       <Main.Screen name="Forgot" component={ForgotScreen} />
-      <Main.Screen name="Main" component={MainScreen} />
+      <Main.Screen name="HomeDraw" component={DrawNavigator} />
     </Main.Navigator>
   );
 }
