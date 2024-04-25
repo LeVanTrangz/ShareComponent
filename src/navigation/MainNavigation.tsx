@@ -11,7 +11,7 @@ const Main = createNativeStackNavigator();
 function MainNavigator() {
   return (
     <Main.Navigator
-    initialRouteName='HomeDraw'
+    initialRouteName='Welcome'
       screenOptions={{
         headerShown: false,
       }}>
